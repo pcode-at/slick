@@ -1700,7 +1700,9 @@
                 
                 if (_.options.focusOnChange) {
                     var $currentSlide = $(_.$slides.get(_.currentSlide));
+                    var x = window.scrollX, y = window.scrollY;
                     $currentSlide.attr('tabindex', 0).focus();
+                    window.scrollTo(x, y);
                 }
             }
 
